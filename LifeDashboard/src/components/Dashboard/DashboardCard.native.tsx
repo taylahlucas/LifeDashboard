@@ -14,7 +14,7 @@ const DashboardCard: React.FunctionComponent = () => {
   }
 
   const { onTouchStart, onTouchEnd } = useSwipe(onSwipeLeft, onSwipeRight, 6)
-  // TODO: Round corners, make swipeable
+  // TODO: make swipeable
   return(
     <View 
       style={{ 
