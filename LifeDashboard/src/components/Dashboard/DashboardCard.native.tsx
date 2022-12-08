@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { WINDOW_HEIGHT, WINDOW_WIDTH } from '../../utils/constants';
 import useSwipe from './hooks/useSwipe.native';
-import DashboardWidget from '../DashboardWidgets/DashboardWidget.native';
+import DraggableList from '../Draggable/DraggableList.native';
 
 const DashboardCard: React.FunctionComponent = () => {
   const onSwipeLeft = () => {
@@ -27,10 +27,7 @@ const DashboardCard: React.FunctionComponent = () => {
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
     >
-      <DashboardWidget backgroundColor={'#F290AA'} />
-      <DashboardWidget /> 
-      <DashboardWidget backgroundColor={'#1EE6D3'}/>
-      <DashboardWidget backgroundColor={'#CAA3F9'} />
+      <DraggableList />
     </View>
   );
 };

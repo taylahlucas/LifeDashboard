@@ -1,10 +1,11 @@
 import React, { useRef } from 'react';
-import { Animated, PanResponder, View } from 'react-native';
+import { Animated, PanResponder } from 'react-native';
 
 interface DraggableProps {
   style: object;
 }
 
+// CUSTOM DRAGGABLE
 // TODO: Only slide up and down
 // TODO: Order in list
 const Draggable = ({ style }: DraggableProps): JSX.Element => {

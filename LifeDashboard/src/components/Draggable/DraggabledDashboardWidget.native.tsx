@@ -1,17 +1,15 @@
 import React from 'react';
-import { Animated, View } from 'react-native';
+import { View } from 'react-native';
 import { WINDOW_WIDTH } from '../../utils/constants';
-import Draggable from '../Draggable/Draggable.native';
 
-interface DashboardWidgetProps {
+interface DraggableDashboardWidgetProps {
   backgroundColor?: string
 }
 
-// TODO: This is just a placeholder widget
 // TODO: Drag and drop functionality
-const DashboardWidget = ({ backgroundColor = '#70D3EE' }: DashboardWidgetProps) => {
+const DraggabledDashboardWidget = ({ backgroundColor = '#70D3EE' }: DraggableDashboardWidgetProps) => {
   return(
-    <Draggable
+    <View
       style={{ 
         width: WINDOW_WIDTH-20, 
         height: 200, 
@@ -23,4 +21,4 @@ const DashboardWidget = ({ backgroundColor = '#70D3EE' }: DashboardWidgetProps) 
   )
 };
 
-export default DashboardWidget;
+export default DraggabledDashboardWidget;

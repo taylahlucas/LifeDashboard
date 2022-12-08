@@ -1,9 +1,8 @@
 import React, {type PropsWithChildren} from 'react';
 import Dashboards from './src/components/Dashboard/Dashboards.native';
-
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import {
   SafeAreaView,
-  ScrollView,
   StyleSheet,
   Text,
   useColorScheme,
@@ -49,17 +48,16 @@ const App = () => {
 
   // TODO: Change this to color of current dashboard
   const backgroundStyle = {
+    flex: 1,
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      {/* <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}> */}
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <SafeAreaView style={backgroundStyle}>
         <Dashboards />
-      {/* </ScrollView> */}
-    </SafeAreaView>
+      </SafeAreaView>
+    </GestureHandlerRootView>
   );
 };
 
