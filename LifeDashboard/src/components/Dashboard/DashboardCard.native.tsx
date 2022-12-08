@@ -14,14 +14,15 @@ const DashboardCard: React.FunctionComponent = () => {
   }
 
   const { onTouchStart, onTouchEnd } = useSwipe(onSwipeLeft, onSwipeRight, 6)
-  // TODO: make swipeable
+
   return(
     <View 
       style={{ 
         width: WINDOW_WIDTH, 
+        minHeight: WINDOW_HEIGHT,
         backgroundColor: '#3E3C3C',
         borderRadius: 5,
-        alignItems: 'center',
+        alignItems: 'center'
       }}
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}

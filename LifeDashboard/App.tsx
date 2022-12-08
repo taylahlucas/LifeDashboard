@@ -1,5 +1,5 @@
 import React, {type PropsWithChildren} from 'react';
-import DashboardGroup from './src/components/Dashboard/DashboardGroup.native';
+import Dashboards from './src/components/Dashboard/Dashboards.native';
 
 import {
   SafeAreaView,
@@ -54,11 +54,11 @@ const App = () => {
 
   return (
     <SafeAreaView style={backgroundStyle}>
-      <ScrollView
+      {/* <ScrollView
         contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <DashboardGroup />
-      </ScrollView>
+        style={backgroundStyle}> */}
+        <Dashboards />
+      {/* </ScrollView> */}
     </SafeAreaView>
   );
 };
