@@ -1,5 +1,7 @@
 import { WINDOW_WIDTH } from '../../../utils/constants';
 
+  // const { onTouchStart, onTouchEnd } = useSwipe(onSwipeLeft, onSwipeRight, 6)
+  
 function useSwipe(onSwipeLeft?: any, onSwipeRight?: any, rangeOffset = 4) {
     let firstTouch = 0
     

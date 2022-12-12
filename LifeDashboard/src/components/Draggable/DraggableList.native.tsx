@@ -11,28 +11,12 @@ function getColor(i: number) {
   return `rgb(${colorVal}, ${Math.abs(128 - colorVal)}, ${255 - colorVal})`;
 }
 
-const styles = StyleSheet.create({
-  rowItem: {
-    height: 100,
-    width: 100,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  text: {
-    color: "white",
-    fontSize: 24,
-    fontWeight: "bold",
-    textAlign: "center",
-  },
-});
-
 type Item = {
   key: string;
   label: string;
   backgroundColor: string;
 };
 
-// TODO: Make dynamic
 const initialData: Item[] = [...Array(NUM_ITEMS)].map((d, index) => {
   const backgroundColor = getColor(index);
   return {
@@ -45,12 +29,13 @@ const initialData: Item[] = [...Array(NUM_ITEMS)].map((d, index) => {
 const DraggableList = () => {
   const [data, setData] = useState(initialData);
 
-  const renderItem = ({ item, drag, isActive }: RenderItemParams<Item>) => {
+  // isActive
+  const renderItem = ({ item, drag }: RenderItemParams<Item>) => {
     return (
       <TouchableOpacity
         onLongPress={drag}
-        delayLongPress={-1}
-        disabled={isActive}
+        delayLongPress={1}
+        disabled={true}
       >
         <DraggabledDashboardWidget key={item.key} backgroundColor={item.backgroundColor} />
       </TouchableOpacity>
