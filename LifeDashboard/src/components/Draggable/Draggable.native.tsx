@@ -5,7 +5,7 @@ interface DraggableProps {
   style: object;
 }
 
-// CUSTOM DRAGGABLE
+// CUSTOM DRAGGABLE -- Not currently used
 // TODO: Only slide up and down
 // TODO: Order in list
 const Draggable = ({ style }: DraggableProps): JSX.Element => {

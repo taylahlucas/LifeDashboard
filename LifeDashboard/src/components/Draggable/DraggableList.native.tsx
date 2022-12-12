@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import DraggableFlatList, { RenderItemParams } from 'react-native-draggable-flatlist';
 import DraggabledDashboardWidget from './DraggabledDashboardWidget.native';
-import { StyleSheet, TouchableOpacity } from 'react-native';
+import { TouchableOpacity } from 'react-native';
+import { WINDOW_HEIGHT } from '../../utils/constants';
 
 const NUM_ITEMS = 3;
 
@@ -17,6 +18,7 @@ type Item = {
   backgroundColor: string;
 };
 
+// TODO: Replace this with mock widget data 
 const initialData: Item[] = [...Array(NUM_ITEMS)].map((d, index) => {
   const backgroundColor = getColor(index);
   return {
@@ -28,23 +30,25 @@ const initialData: Item[] = [...Array(NUM_ITEMS)].map((d, index) => {
 
 const DraggableList = () => {
   const [data, setData] = useState(initialData);
+  
+  const renderItem = ({ item, getIndex, drag }: RenderItemParams<Item>) => {
+    const index: number = getIndex() ?? 0;
 
-  // isActive
-  const renderItem = ({ item, drag }: RenderItemParams<Item>) => {
     return (
       <TouchableOpacity
         onLongPress={drag}
-        delayLongPress={1}
-        disabled={true}
+        delayPressIn={500}
       >
-        <DraggabledDashboardWidget key={item.key} backgroundColor={item.backgroundColor} />
+        <DraggabledDashboardWidget key={item.key} index={index} backgroundColor={item.backgroundColor} />
       </TouchableOpacity>
     );
   };
 
   return (
     <DraggableFlatList
+      style={{ maxHeight: WINDOW_HEIGHT-200, top: 20, borderRadius: 2 }}
       data={data}
+      scrollsToTop={false}
       onDragEnd={({ data }) => setData(data)}
       keyExtractor={(item) => item.key}
       renderItem={renderItem}

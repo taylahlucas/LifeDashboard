@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import { WINDOW_HEIGHT, WINDOW_WIDTH } from '../../utils/constants';
 import DraggableList from '../Draggable/DraggableList.native';
+import DashboardCardHeader from './CardHeader/DashboardCardHeader.native';
 import { DashboardData } from '../../data/mockData.native';
 
 interface DashboardCardProps {
@@ -13,23 +14,13 @@ const DashboardCard = ({ item }: DashboardCardProps) => {
     <View 
       style={{ 
         width: WINDOW_WIDTH, 
-        minHeight: WINDOW_HEIGHT-10,
+        minHeight: WINDOW_HEIGHT,
         backgroundColor: '#3E3C3C',
         borderRadius: 5,
         alignItems: 'center'
       }}
     >
-      <Text 
-        style={{ 
-          fontSize: 20,
-          fontWeight: 'bold',
-          marginTop: 20,
-          justifyContent: 'center',
-          alignContent: 'center', 
-          color: 'white'
-        }}>
-        {item.name}
-      </Text>
+      <DashboardCardHeader title={item.name} />
       <DraggableList />
     </View>
   );
