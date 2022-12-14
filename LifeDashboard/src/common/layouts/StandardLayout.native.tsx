@@ -4,11 +4,11 @@ import standardStyles from './StandardStyles.native';
 interface StandardLayoutProps {
   children: any;
 }
-
-const StandardLayout = ({ children }: StandardLayoutProps) => {
+// { children }: StandardLayoutProps
+const StandardLayout = () => {
   return (
     <View style={standardStyles.base}>
-      {...children}
+      {/* {...children} */}
     </View>
   );
 };

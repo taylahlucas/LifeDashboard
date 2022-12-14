@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import DashboardMenuItem from './DashboardMenuItem.native';
 import dashboardMenuStyles from'./DashboardMenuStyles.native';
-import widgetData from '../../../data/widgetData.native';
+import { widgetData } from '../../../data/widgetData.native';
 
 const DashboardMenuContainer: React.FunctionComponent = () => {
   return (
@@ -15,7 +15,7 @@ const DashboardMenuContainer: React.FunctionComponent = () => {
               ...dashboardMenuStyles.box, 
               backgroundColor: widget.backgroundColor 
             }} 
-            icon={widget.icon}
+            item={widget}
           />)
         }
       </View>

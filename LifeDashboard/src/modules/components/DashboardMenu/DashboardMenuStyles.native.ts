@@ -3,7 +3,6 @@ import { StyleSheet } from 'react-native';
 const dashboardMenuStyles = StyleSheet.create({
   base: {
     position: 'absolute',
-    top: 10,
     left: 0,
     zIndex: 3
   },
@@ -17,7 +16,7 @@ const dashboardMenuStyles = StyleSheet.create({
     borderRadius: 5
   },
   row: {
-    marginTop: 50
+    marginTop: 55
   },
   box: {
     width: 50,

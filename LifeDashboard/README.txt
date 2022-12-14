@@ -7,6 +7,11 @@ react-native-draggable-flatlist
 react-native-reanimated-carousel
   - react-native-reanimated
 
+@react-navigation/native
+  - react-native-screens
+  - react-native-safe-area-context
+  - @react-navigation/native-stack
+
 
 /* Babel Plugins */
 

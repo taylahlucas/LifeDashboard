@@ -1,11 +1,11 @@
-import React, {type PropsWithChildren} from 'react';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 import Dashboards from './src/modules/components/Dashboard/Dashboards.native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import {
   SafeAreaView,
   useColorScheme,
 } from 'react-native';
-
 import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
@@ -20,31 +20,14 @@ const App = () => {
   };
 
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      <SafeAreaView style={backgroundStyle}>
-        <Dashboards />
-      </SafeAreaView>
-    </GestureHandlerRootView>
+    <NavigationContainer>
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <SafeAreaView style={backgroundStyle}>
+          <Dashboards />
+        </SafeAreaView>
+      </GestureHandlerRootView>
+    </NavigationContainer>
   );
 };
-
-// const styles = StyleSheet.create({
-//   sectionContainer: {
-//     marginTop: 32,
-//     paddingHorizontal: 24,
-//   },
-//   sectionTitle: {
-//     fontSize: 24,
-//     fontWeight: '600',
-//   },
-//   sectionDescription: {
-//     marginTop: 8,
-//     fontSize: 18,
-//     fontWeight: '400',
-//   },
-//   highlight: {
-//     fontWeight: '700',
-//   },
-// });
 
 export default App;
