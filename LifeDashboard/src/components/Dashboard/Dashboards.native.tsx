@@ -5,6 +5,7 @@ import { useSharedValue } from 'react-native-reanimated';
 import { WINDOW_WIDTH, WINDOW_HEIGHT } from '../../utils/constants';
 import DashboardCard from './DashboardCard.native';
 import mockData from '../../data/mockData.native';
+import DashboardMenu from '../DashboardMenu/DashboardMenu.native';
 
 const Dashboards: React.FunctionComponent = () => {
   const isCarousel = React.useRef(mockData.length > 1);
@@ -18,6 +19,7 @@ const Dashboards: React.FunctionComponent = () => {
   
   return(
     <View style={{ alignItems: 'center' }}>
+        <DashboardMenu />
         <Carousel
           {...baseOptions}
           pagingEnabled={isCarousel.current}
