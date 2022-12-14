@@ -24,9 +24,6 @@ const Draggable = ({ style }: DraggableProps): JSX.Element => {
       onPanResponderGrant: (event, gestureState) => {
         // Gesture has started, show visual feedback 
         // gestureState.d{x,y} will be set to zero
-        console.log("X VALUE: ", pan.x._value)
-        console.log("Y VALUE: ", pan.y._value)
-        
         pan.setOffset({
           x: pan.x._value,
           y: pan.y._value

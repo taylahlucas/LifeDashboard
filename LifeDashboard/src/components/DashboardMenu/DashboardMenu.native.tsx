@@ -1,19 +1,16 @@
 import React, { useState } from 'react';
 import { View } from 'react-native';
 import DashboardMenuButton from './DashboardMenuButton.native';
-import DashboardMenuOpen from './DashboardMenuOpen.native';
+import DashboardMenuContainer from './DashboardMenuContainer.native';
+import dashboardMenuStyles from './DashboardMenuStyles.native';
 
 const DashboardMenu: React.FunctionComponent = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <View style={{ position: 'absolute', top: 0, left: 0, zIndex: 3 }}>
+    <View style={dashboardMenuStyles.base}>
       <DashboardMenuButton onPress={() => setMenuOpen(!menuOpen)} />
-      {menuOpen 
-        ? <DashboardMenuOpen /> 
-        : <></>
-      }
-      
+      {menuOpen ? <DashboardMenuContainer /> : <></>}
     </View>
   );
 };

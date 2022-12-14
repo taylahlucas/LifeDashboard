@@ -18,6 +18,7 @@ const DashboardMenuButton = ({ onPress }: DashboardMenuButtonProps) => {
         zIndex: 4
       }}
       onPress={(): void => onPress()}>
+        {/* // TODO: Animate turning icon on menu open */}
         <Icon name='menu-outline' size={40} color='white'/>
       </Pressable>
   );

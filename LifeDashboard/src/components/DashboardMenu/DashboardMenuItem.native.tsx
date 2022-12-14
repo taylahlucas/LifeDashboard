@@ -1,17 +1,18 @@
 import React from 'react';
 import { Pressable } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
+import dashboardMenuStyles from './DashboardMenuStyles.native';
 
-const DashboardMenuItem = () => {
+interface DashboardMenuItemProps {
+  style: object;
+  icon: string;
+}
+
+const DashboardMenuItem = ({ style, icon }: DashboardMenuItemProps) => {
   return (
-    <Pressable 
-      style={{
-        backgroundColor: 'blue',
-        width: 40,
-        height: 40,
-        position: 'absolute',
-        left: 10,
-        zIndex: 5
-      }}/>
+    <Pressable style={{...style}}>
+      <Icon style={dashboardMenuStyles.icon} name={icon} size={40} color='white' />
+    </Pressable>
   );
 };
 
