@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import DashboardMenuItem from './DashboardMenuItem.native';
 import dashboardMenuStyles from'./DashboardMenuStyles.native';
-import widgetData from '../../data/widgetData.native';
+import widgetData from '../../../data/widgetData.native';
 
 const DashboardMenuContainer: React.FunctionComponent = () => {
   return (

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import DraggableFlatList, { RenderItemParams } from 'react-native-draggable-flatlist';
 import DraggabledDashboardWidget from './DraggabledDashboardWidget.native';
 import { TouchableOpacity } from 'react-native';
-import { WINDOW_HEIGHT } from '../../utils/constants';
+import { WINDOW_HEIGHT } from '../../../utils/constants';
 
 const NUM_ITEMS = 3;
 

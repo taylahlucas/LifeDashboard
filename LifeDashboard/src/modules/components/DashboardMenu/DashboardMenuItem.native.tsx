@@ -10,8 +10,16 @@ interface DashboardMenuItemProps {
 
 const DashboardMenuItem = ({ style, icon }: DashboardMenuItemProps) => {
   return (
-    <Pressable style={{...style}}>
-      <Icon style={dashboardMenuStyles.icon} name={icon} size={40} color='white' />
+    <Pressable 
+      style={{...style}}
+      // onPress={(): void => }
+    >
+      <Icon 
+        style={dashboardMenuStyles.icon} 
+        name={icon} 
+        size={40} 
+        color='white' 
+      />
     </Pressable>
   );
 };

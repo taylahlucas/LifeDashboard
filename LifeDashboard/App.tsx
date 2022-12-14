@@ -1,5 +1,5 @@
 import React, {type PropsWithChildren} from 'react';
-import Dashboards from './src/components/Dashboard/Dashboards.native';
+import Dashboards from './src/modules/components/Dashboard/Dashboards.native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import {
   SafeAreaView,

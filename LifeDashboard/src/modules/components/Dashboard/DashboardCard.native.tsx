@@ -1,9 +1,9 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import { WINDOW_HEIGHT, WINDOW_WIDTH } from '../../utils/constants';
+import { WINDOW_HEIGHT, WINDOW_WIDTH } from '../../../utils/constants';
 import DraggableList from '../Draggable/DraggableList.native';
 import DashboardCardHeader from './CardHeader/DashboardCardHeader.native';
-import { DashboardData } from '../../data/mockData.native';
+import { DashboardData } from '../../../data/mockData.native';
 
 interface DashboardCardProps {
   item: DashboardData;

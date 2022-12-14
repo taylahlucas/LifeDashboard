@@ -1,4 +1,4 @@
-import { WINDOW_WIDTH } from '../../../utils/constants';
+import { WINDOW_WIDTH } from '../../../../utils/constants';
 
   // const { onTouchStart, onTouchEnd } = useSwipe(onSwipeLeft, onSwipeRight, 6)
   

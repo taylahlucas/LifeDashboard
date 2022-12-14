@@ -2,9 +2,9 @@ import React from 'react';
 import { View } from 'react-native';
 import Carousel from 'react-native-reanimated-carousel';
 import { useSharedValue } from 'react-native-reanimated';
-import { WINDOW_WIDTH, WINDOW_HEIGHT } from '../../utils/constants';
+import { WINDOW_WIDTH, WINDOW_HEIGHT } from '../../../utils/constants';
 import DashboardCard from './DashboardCard.native';
-import mockData from '../../data/mockData.native';
+import mockData from '../../../data/mockData.native';
 import DashboardMenu from '../DashboardMenu/DashboardMenu.native';
 
 const Dashboards: React.FunctionComponent = () => {
