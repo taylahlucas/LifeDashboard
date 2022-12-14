@@ -1,6 +1,6 @@
 import React from 'react';
 import { Pressable } from 'react-native';
-// import Icon from 'react-native-vector-icons';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 interface DashboardMenuButtonProps {
   onPress: () => void
@@ -10,15 +10,16 @@ const DashboardMenuButton = ({ onPress }: DashboardMenuButtonProps) => {
   return (
     <Pressable 
       style={{ 
-        backgroundColor: 'white',
         width: 40, 
         height: 40, 
         position: 'absolute', 
-        left: 0, 
-        top: 0, 
+        left: 10, 
+        top: 10, 
         zIndex: 4
       }}
-      onPress={(): void => onPress()} />
+      onPress={(): void => onPress()}>
+        <Icon name='menu-outline' size={40} color='white'/>
+      </Pressable>
   );
 };
 
