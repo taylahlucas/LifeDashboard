@@ -8,28 +8,31 @@ import { DashboardMenuItemType, IconType } from '../../../data/widgetData.native
 interface DashboardMenuItemProps {
   style: object;
   item: DashboardMenuItemType;
+  onPress: () => void;
 }
 
-const DashboardMenuItem = ({ style, item }: DashboardMenuItemProps) => {
+const DashboardMenuItem = ({ style, item, onPress }: DashboardMenuItemProps) => {
   return (
     <Pressable 
       style={{...style}}
-      // onPress={(): void => }
     >
       {/* // TODO: Refactor */}
       {item.iconType === IconType.MaterialIcon
         ? <MaterialIcons
-          style={dashboardMenuStyles.icon} 
-          name={item.icon} 
-          size={40} 
-          color='white' 
-        /> 
+            style={dashboardMenuStyles.icon} 
+            name={item.icon} 
+            size={40} 
+            color='white' 
+            // TODO: Navigate to screen
+            onPress={onPress}
+          /> 
         : <IonIcons 
-          style={dashboardMenuStyles.icon} 
-          name={item.icon} 
-          size={40} 
-          color='white' 
-        />
+            style={dashboardMenuStyles.icon} 
+            name={item.icon} 
+            size={40} 
+            color='white' 
+            onPress={(): void => console.log("PRESSED-2")}
+          />
       }
     </Pressable>
   );
