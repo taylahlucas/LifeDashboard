@@ -6,6 +6,11 @@ const standardStyles = StyleSheet.create({
     width: WINDOW_WIDTH,
     height: WINDOW_HEIGHT,
     backgroundColor: '#3E3C3C'
+  },
+  closeBtnContainer: {
+    top: 60, 
+    width: 45,
+    alignSelf: 'flex-end'
   }
 });
 
