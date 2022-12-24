@@ -2,16 +2,16 @@ import React from 'react';
 import { Pressable } from 'react-native';
 import IonIcons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import dashboardMenuStyles from './DashboardMenuStyles.native';
-import { DashboardMenuItemType, IconType } from '../../../data/widgetData.native';
+import sideMenuStyles from './SideMenuStyles';
+import { SideMenuItemType, IconType } from '../../../data/widgetData.native';
 
-interface DashboardMenuItemProps {
+interface SideMenuItemProps {
   style: object;
-  item: DashboardMenuItemType;
+  item: SideMenuItemType;
   onPress: () => void;
 }
 
-const DashboardMenuItem = ({ style, item, onPress }: DashboardMenuItemProps) => {
+const SideMenuItem = ({ style, item, onPress }: SideMenuItemProps) => {
   return (
     <Pressable 
       style={{...style}}
@@ -19,7 +19,7 @@ const DashboardMenuItem = ({ style, item, onPress }: DashboardMenuItemProps) => 
       {/* // TODO: Refactor */}
       {item.iconType === IconType.MaterialIcon
         ? <MaterialIcons
-            style={dashboardMenuStyles.icon} 
+            style={sideMenuStyles.icon} 
             name={item.icon} 
             size={40} 
             color='white' 
@@ -27,7 +27,7 @@ const DashboardMenuItem = ({ style, item, onPress }: DashboardMenuItemProps) => 
             onPress={onPress}
           /> 
         : <IonIcons 
-            style={dashboardMenuStyles.icon} 
+            style={sideMenuStyles.icon} 
             name={item.icon} 
             size={40} 
             color='white' 
@@ -38,4 +38,4 @@ const DashboardMenuItem = ({ style, item, onPress }: DashboardMenuItemProps) => 
   );
 };
 
-export default DashboardMenuItem;
+export default SideMenuItem;

@@ -2,10 +2,10 @@ import React from 'react';
 import { View } from 'react-native';
 import Carousel from 'react-native-reanimated-carousel';
 import { useSharedValue } from 'react-native-reanimated';
-import { WINDOW_WIDTH, WINDOW_HEIGHT } from '../../../utils/constants';
+import { WINDOW_WIDTH, WINDOW_HEIGHT } from '../../utils/constants';
 import DashboardCard from './DashboardCard.native';
-import mockData from '../../../data/mockData.native';
-import DashboardMenu from '../DashboardMenu/DashboardMenu.native';
+import mockData from '../../data/mockData.native';
+import Spacer from '../../common/general/Spacer.native';
 
 const Dashboards: React.FunctionComponent = () => {
   const isCarousel = React.useRef(mockData.length > 1);
@@ -19,7 +19,7 @@ const Dashboards: React.FunctionComponent = () => {
   
   return(
     <View style={{ alignItems: 'center' }}>
-        <DashboardMenu />
+        <Spacer height={30} />
         <Carousel
           {...baseOptions}
           pagingEnabled={isCarousel.current}

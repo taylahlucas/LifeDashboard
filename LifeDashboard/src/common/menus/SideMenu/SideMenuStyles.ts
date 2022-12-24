@@ -1,9 +1,10 @@
 import { StyleSheet } from 'react-native';
 
-const dashboardMenuStyles = StyleSheet.create({
+const sideMenuStyles = StyleSheet.create({
   base: {
     position: 'absolute',
     left: 0,
+    top: 35,
     zIndex: 3
   },
   container: {
@@ -13,7 +14,6 @@ const dashboardMenuStyles = StyleSheet.create({
     height: 390,
     width: 70,
     opacity: 0.6,
-    backgroundColor: '#00000050',
     borderRadius: 5,
     boxShadow: 20,
     shadowColor: '#000',
@@ -36,4 +36,4 @@ const dashboardMenuStyles = StyleSheet.create({
   }
 });
 
-export default dashboardMenuStyles;
+export default sideMenuStyles;

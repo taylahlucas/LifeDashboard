@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { WINDOW_WIDTH } from '../../utils/constants';
 
 export enum CustomTextStyle {
   PageTitle,
@@ -7,11 +8,10 @@ export enum CustomTextStyle {
 
 export const customTextStyles = StyleSheet.create({
   pageTitle: {
-    top: 95,
     color: 'white',
     textAlign: 'center',
     fontSize: 25,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   subtitle: {
     fontSize: 16

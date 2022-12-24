@@ -4,7 +4,7 @@ import { CustomTextStyle } from './CustomTextStyles.native';
 import useGetCustomTextStyle from './hooks/useGetCustomTextStyle.native';
 
 interface CustomTextProps {
-  label: string;
+  label: String;
   textStyle: CustomTextStyle;
 }
 

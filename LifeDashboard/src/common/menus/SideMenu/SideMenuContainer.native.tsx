@@ -1,22 +1,22 @@
 import React from 'react';
 import { View } from 'react-native';
-import DashboardMenuItem from './DashboardMenuItem.native';
-import dashboardMenuStyles from'./DashboardMenuStyles.native';
+import SideMenuItem from './SideMenuItem.native';
+import sideMenuStyles from'./SideMenuStyles';
 import { widgetData } from '../../../data/widgetData.native';
 import { useReactNavigation, PageEnum } from '../../../navigation/hooks/useReactNavigation.native';
 
-const DashboardMenuContainer: React.FunctionComponent = () => {
+const SideMenuContainer: React.FunctionComponent = () => {
   const navigation = useReactNavigation();
 
   return (
     <>
-      <View style={dashboardMenuStyles.container} />
-      <View style={dashboardMenuStyles.row}>
+      <View style={sideMenuStyles.container} />
+      <View style={sideMenuStyles.row}>
         {widgetData.map(widget => 
-          <DashboardMenuItem 
+          <SideMenuItem 
             key={widget.type}
             style={{ 
-              ...dashboardMenuStyles.box, 
+              ...sideMenuStyles.box, 
               backgroundColor: widget.backgroundColor 
             }} 
             item={widget}
@@ -28,4 +28,4 @@ const DashboardMenuContainer: React.FunctionComponent = () => {
   );
 };
 
-export default DashboardMenuContainer;
+export default SideMenuContainer;

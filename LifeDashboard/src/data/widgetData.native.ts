@@ -3,7 +3,7 @@ export enum IconType {
   IonIcons,
 }
 
-export type DashboardMenuItemType = {
+export type SideMenuItemType = {
   // TODO: Turn into enum
   type: string;
   iconType: IconType;
@@ -11,7 +11,7 @@ export type DashboardMenuItemType = {
   backgroundColor: string;
 };
 
-export const widgetData: Array<DashboardMenuItemType> = [
+export const widgetData: Array<SideMenuItemType> = [
   {
     type: 'quotes',
     iconType: IconType.MaterialIcon,

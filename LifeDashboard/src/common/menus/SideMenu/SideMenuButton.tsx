@@ -2,11 +2,11 @@ import React from 'react';
 import { Pressable } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-interface DashboardMenuButtonProps {
+interface SideMenuButtonProps {
   onPress: () => void
 }
 
-const DashboardMenuButton = ({ onPress }: DashboardMenuButtonProps) => {
+const SideMenuButton = ({ onPress }: SideMenuButtonProps) => {
   return (
     <Pressable 
       style={{ 
@@ -24,4 +24,4 @@ const DashboardMenuButton = ({ onPress }: DashboardMenuButtonProps) => {
   );
 };
 
-export default DashboardMenuButton;
+export default SideMenuButton;
