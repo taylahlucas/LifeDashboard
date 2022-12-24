@@ -13,7 +13,7 @@ const CloseButton: React.FunctionComponent<CloseButtonProps> = ({
 }) => {
   return (
     <Pressable style={style} onPress={onPress}>
-      <Icon name='close-outline' size={40} color='white'/>
+      <Icon name='close-outline' size={40} color='grey'/>
     </Pressable>
   );
 };

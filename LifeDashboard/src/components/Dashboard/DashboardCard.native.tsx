@@ -4,6 +4,7 @@ import { WINDOW_HEIGHT, WINDOW_WIDTH } from '../../utils/constants';
 import DraggableList from '../Draggable/DraggableList.native';
 import DashboardCardHeader from './CardHeader/DashboardCardHeader.native';
 import { DashboardData } from '../../data/mockData.native';
+import StandardLayout from '../../common/layouts/StandardLayout.native';
 
 interface DashboardCardProps {
   item: DashboardData;
@@ -11,17 +12,9 @@ interface DashboardCardProps {
 
 const DashboardCard = ({ item }: DashboardCardProps) => {
   return(
-    <View 
-      style={{ 
-        width: WINDOW_WIDTH, 
-        minHeight: WINDOW_HEIGHT,
-        backgroundColor: '#3E3C3C',
-        alignItems: 'center'
-      }}
-    >
-      <DashboardCardHeader title={item.name} />
+    <StandardLayout title={item.name}>
       <DraggableList />
-    </View>
+    </StandardLayout>
   );
 };
 

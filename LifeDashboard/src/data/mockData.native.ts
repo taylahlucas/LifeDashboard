@@ -1,6 +1,6 @@
 export interface DashboardData {
   id: number,
-  name: String
+  name: string
 }
 
 const dashboardData: Array<DashboardData> = [

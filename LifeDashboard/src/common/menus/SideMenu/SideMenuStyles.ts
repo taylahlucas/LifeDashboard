@@ -4,7 +4,7 @@ const sideMenuStyles = StyleSheet.create({
   base: {
     position: 'absolute',
     left: 0,
-    top: 35,
+    top: 40,
     zIndex: 3
   },
   container: {

@@ -1,30 +1,34 @@
-import { View, Text } from 'react-native';
-import CloseButton from '../buttons/CloseButton.native';
+import { SafeAreaView, View } from 'react-native';
 import standardStyles from './StandardStyles.native';
-import { useReactNavigation } from '../../navigation/hooks/useReactNavigation.native';
-import CustomText from '../general/CustomText.native';
-import { CustomTextStyle } from '../general/CustomTextStyles.native';
-import Spacer from '../general/Spacer.native';
+import HeaderLayout from './HeaderLayout.native';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
-interface WidgetPageLayoutProps {
-  title: string;
+interface StandardLayoutProps {
+  children: any;
+  title?: string;
+  headerAction?: () => void;
 };
 
-const WidgetPageLayout = () => {
-  const navigation = useReactNavigation();
+const StandardLayout = ({ children, title, headerAction }: StandardLayoutProps) => {
+  const backgroundStyle = {
+    flex: 1,
+    backgroundColor: '#3E3C3C',
+    // backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+  };
 
   return (
-    <>
-      <View style={standardStyles.container}>
-        <Spacer height={40} />
-        <CloseButton 
-          style={standardStyles.closeBtnContainer}
-          onPress={(): void => navigation.goBack()}
-        />
-        <CustomText label={'Page Title'} textStyle={CustomTextStyle.PageTitle} />
-      </View>
-    </>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <SafeAreaView style={backgroundStyle}>
+        <View style={standardStyles.container}>
+          <HeaderLayout
+            title={title} 
+            onPress={headerAction} 
+          />
+          {children}
+        </View>
+      </SafeAreaView>
+    </GestureHandlerRootView>
   );
 };
 
-export default WidgetPageLayout;
+export default StandardLayout;
