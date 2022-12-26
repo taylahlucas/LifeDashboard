@@ -8,9 +8,12 @@ const standardStyles = StyleSheet.create({
     backgroundColor: '#3E3C3C',
     alignItems: 'center'
   },
-  closeBtnContainer: {
+  headerBtnContainer: {
     width: 45,
     alignSelf: 'flex-end'
+  },
+  footerStyle: {
+    bottom: 100
   }
 });
 

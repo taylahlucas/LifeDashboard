@@ -11,6 +11,7 @@ const QuotesScreen = () => {
     <StandardLayout 
       title={'Quotes'} 
       headerAction={(): void => navigation.goBack()}
+      footerAction={(): void => navigation.goBack()}
     >
       <Spacer height={10} />
       {/* // TODO: Add plus button & quotes container */}

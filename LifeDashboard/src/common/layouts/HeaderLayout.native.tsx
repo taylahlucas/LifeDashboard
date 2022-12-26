@@ -20,7 +20,6 @@ const HeaderLayout = ({ title = '', onPress }: HeaderLayoutProps): JSX.Element =
       :
         <></>
     }
-
       <CustomText label={title} textStyle={CustomTextStyle.PageTitle} />
     </>
   );
