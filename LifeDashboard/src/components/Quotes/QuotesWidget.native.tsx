@@ -14,7 +14,7 @@ const QuotesWidget = ({ quote, author }: QuotesWidgetInterface): JSX.Element => 
   return (
     <QuotesWidgetContainer>
       <CustomText 
-        label={'The greatest glory in living lies not in never falling, but in rising every time we fall.'} 
+        label={quote} 
         textStyle={CustomTextStyle.Paragraph}
       />
     </QuotesWidgetContainer>

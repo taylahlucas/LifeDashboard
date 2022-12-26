@@ -11,8 +11,10 @@ const SideMenu: React.FunctionComponent = () => {
     <View style={sideMenuStyles.base}>
       <SideMenuButton onPress={() => setMenuOpen(!menuOpen)} />
       {menuOpen 
-      ? <SideMenuContainer /> 
-      : <></>
+        ? 
+        <SideMenuContainer onItemPress={() => setMenuOpen(false)}/> 
+        :
+        <></>
     }
     </View>
   );

@@ -17,7 +17,7 @@ const SideMenuButton = ({ onPress }: SideMenuButtonProps) => {
         top: 10, 
         zIndex: 4
       }}
-      onPress={(): void => onPress()}>
+      onPress={onPress}>
         {/* // TODO: Animate turning icon on menu open */}
         <Icon name='menu-outline' size={40} color='white'/>
       </Pressable>

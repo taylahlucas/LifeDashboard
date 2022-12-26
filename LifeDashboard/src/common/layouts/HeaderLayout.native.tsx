@@ -14,11 +14,11 @@ const HeaderLayout = ({ title = '', onPress }: HeaderLayoutProps): JSX.Element =
       {!!onPress 
       ?      
         <CloseButton 
-          style={standardStyles.closeBtnContainer}
+          style={standardStyles.headerBtnContainer}
           onPress={onPress}
         /> 
       :
-        <></>
+        null
     }
       <CustomText label={title} textStyle={CustomTextStyle.PageTitle} />
     </>

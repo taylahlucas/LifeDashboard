@@ -5,7 +5,11 @@ import sideMenuStyles from'./SideMenuStyles';
 import { widgetData } from '../../../data/widgetData.native';
 import { useReactNavigation, PageEnum } from '../../../navigation/hooks/useReactNavigation.native';
 
-const SideMenuContainer: React.FunctionComponent = () => {
+interface SideMenuContainerProps {
+  onItemPress: () => void;
+}
+
+const SideMenuContainer = ({ onItemPress }: SideMenuContainerProps): JSX.Element => {
   const navigation = useReactNavigation();
 
   return (
@@ -20,7 +24,10 @@ const SideMenuContainer: React.FunctionComponent = () => {
               backgroundColor: widget.backgroundColor 
             }} 
             item={widget}
-            onPress={(): void => navigation.navigate(PageEnum.Quotes)}
+            onPress={(): void => {
+              navigation.navigate(widget.page)
+              onItemPress();
+            }}
           />)
         }
       </View>

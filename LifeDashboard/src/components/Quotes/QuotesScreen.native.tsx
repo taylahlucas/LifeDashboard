@@ -7,6 +7,7 @@ import QuotesWidget from './QuotesWidget.native';
 
 const QuotesScreen = () => {
   const navigation = useReactNavigation();
+  
   return (
     <StandardLayout 
       title={'Quotes'} 
@@ -14,13 +15,11 @@ const QuotesScreen = () => {
       footerAction={(): void => navigation.goBack()}
     >
       <Spacer height={10} />
-      {/* // TODO: Add plus button & quotes container */}
       <ScrollView>
-        <QuotesWidget />
-        <QuotesWidget />
-        <QuotesWidget />
-        <QuotesWidget />
-        <QuotesWidget />
+        <QuotesWidget quote={'The greatest glory in living lies not in never falling, but in rising every time we fall.'} author={''} />
+        <QuotesWidget quote={'The greatest glory in living lies not in never falling, but in rising every time we fall.'} author={''} />
+        <QuotesWidget quote={'The greatest glory in living lies not in never falling, but in rising every time we fall.'} author={''} />
+        <QuotesWidget quote={'The greatest glory in living lies not in never falling, but in rising every time we fall.'} author={''} />
       </ScrollView>
     </StandardLayout>
   );

@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { NavigationContainer, ParamListBase } from "@react-navigation/native";
 import { useNavigation, useNavigationState } from '@react-navigation/native';
-import { StackNavigationProp } from '@react-navigation/stack/src/types';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 export enum PageEnum {
   Home = 'Home',
@@ -15,7 +15,7 @@ export interface Navigation {
 };
 
 export const useReactNavigation = (): Navigation => {
-  const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
+  const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
   
   return useRef({
     navigate: (page: PageEnum, params?: any): void => navigation.navigate(page, params),
