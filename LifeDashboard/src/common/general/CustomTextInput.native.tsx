@@ -16,7 +16,7 @@ const CustomTextInput = ({
   textStyle, 
   placeholder = '', 
   maxLength = 100,
-  height = 30,
+  height = 20,
   multiline = false,
 }: CustomTextInputProps): JSX.Element => {
   const [value, setValue] = useState('')
