@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import QuotesScreen from '../components/Quotes/QuotesScreen.native';
 import Dashboards from '../components/Dashboard/Dashboards.native';
+import QuotesScreen from '../components/Quotes/QuotesScreen.native';
+import AddWidgetPopup from '../common/layouts/AddWidgetPopup.native';
 
 const MenuStack = createNativeStackNavigator();
 

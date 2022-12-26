@@ -1,11 +1,12 @@
 import { useRef } from 'react';
-import { NavigationContainer, ParamListBase } from "@react-navigation/native";
-import { useNavigation, useNavigationState } from '@react-navigation/native';
+import { ParamListBase } from "@react-navigation/native";
+import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 export enum PageEnum {
   Home = 'Home',
-  Quotes = 'Quotes'
+  Quotes = 'Quotes',
+  AddQuote = 'Quote'
 };
 
 export interface Navigation {

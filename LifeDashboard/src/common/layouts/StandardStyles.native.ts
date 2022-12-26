@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { WINDOW_HEIGHT, WINDOW_WIDTH } from '../../utils/constants';
+import { WINDOW_HEIGHT, WINDOW_WIDTH, defaultSidePaddingLong} from '../../utils/constants';
 
 const standardStyles = StyleSheet.create({
   container: {
@@ -14,6 +14,16 @@ const standardStyles = StyleSheet.create({
   },
   footerStyle: {
     bottom: 100
+  },
+  addWidgetContainer: {
+    width: WINDOW_WIDTH - (defaultSidePaddingLong * 2),
+    height: 400,
+    backgroundColor: '#4F4C4C',
+    alignSelf: 'center',
+    top: 80,
+  },
+  addWidgetInnerContainer: {
+    padding: 20
   }
 });
 

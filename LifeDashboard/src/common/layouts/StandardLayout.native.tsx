@@ -7,11 +7,12 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 interface StandardLayoutProps {
   children: any;
   title?: string;
+  style?: object;
   headerAction?: () => void;
   footerAction?: () => void;
 };
 
-const StandardLayout = ({ children, title, headerAction, footerAction }: StandardLayoutProps) => {
+const StandardLayout = ({ children, title, style, headerAction, footerAction }: StandardLayoutProps) => {
   const backgroundStyle = {
     flex: 1,
     backgroundColor: '#3E3C3C',
@@ -19,7 +20,7 @@ const StandardLayout = ({ children, title, headerAction, footerAction }: Standar
   };
 
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
+    <GestureHandlerRootView style={{ ...style, flex: 1 }}>
       <SafeAreaView style={backgroundStyle}>
         <View style={standardStyles.container}>
           {!!title
