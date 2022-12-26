@@ -26,8 +26,12 @@ const QuotesScreen = () => {
         <QuotesWidget quote={'The greatest glory in living lies not in never falling, but in rising every time we fall.'} author={''} />
         <QuotesWidget quote={'The greatest glory in living lies not in never falling, but in rising every time we fall.'} author={''} />
       </ScrollView>
-      <AddWidgetPopup title={'Add Quote'} isVisible={addQuote} onClose={addQuotePressed}>
-        <Spacer height={20} /> 
+      <AddWidgetPopup 
+        title={'Add Quote'}
+        isVisible={addQuote} 
+        onClose={addQuotePressed}
+      >
+        <Spacer height={25} /> 
         <CustomTextInput 
           textStyle={CustomTextStyle.InputParagraph}
           placeholder={'Enter quote...'} 
@@ -36,7 +40,10 @@ const QuotesScreen = () => {
           multiline={true}
         />
         <Spacer height={10} />
-        <CustomTextInput placeholder={'Author...'} textStyle={CustomTextStyle.InputSingleLine}/>
+        <CustomTextInput
+          placeholder={'Author...'} 
+          textStyle={CustomTextStyle.InputSingleLine}
+        />
       </AddWidgetPopup>
     </StandardLayout>
   );

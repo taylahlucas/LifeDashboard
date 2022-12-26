@@ -24,11 +24,9 @@ const standardStyles = StyleSheet.create({
   },
   addWidgetContainer: {
     width: WINDOW_WIDTH - (defaultSidePaddingLong * 2),
-    // TODO: Make height dynamic
-    minHeight: 500,
     backgroundColor: '#4F4C4C',
     alignSelf: 'center',
-    top: 70,
+    top: 80,
     borderRadius: 5,
     shadowRadius: 5,
     zIndex: 10
@@ -37,7 +35,11 @@ const standardStyles = StyleSheet.create({
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20
-  } 
+  },
+  addWidgetButton: {
+    alignItems: 'center',
+    padding: 20
+  }
 });
 
 export default standardStyles;

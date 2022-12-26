@@ -4,6 +4,7 @@ import CustomText from '../general/CustomText.native';
 import { CustomTextStyle } from '../general/CustomTextStyles.native';
 import HeaderLayout from './HeaderLayout.native';
 import standardStyles from './StandardStyles.native';
+import TickButton from '../../common/buttons/TickButton.native';
 
 interface AddWidgetPopupProps {
   title?: string;
@@ -41,6 +42,11 @@ const AddWidgetPopup = ({ title='', children, isVisible, onClose }: AddWidgetPop
             />
             {children}
           </View>
+          <TickButton 
+            style={standardStyles.addWidgetButton}
+            // TODO: Add quote to DB
+            onPress={(): void => console.log("CONFIRM")}
+          />
         </View>
       </Modal>
     </View>
