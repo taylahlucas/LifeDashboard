@@ -9,7 +9,6 @@ const standardStyles = StyleSheet.create({
     alignItems: 'center'
   },
   closeBtnContainer: {
-    // marginTop: 40,
     width: 45,
     alignSelf: 'flex-end'
   }

@@ -1,9 +1,9 @@
 import { StyleSheet } from 'react-native';
-import { WINDOW_WIDTH } from '../../utils/constants';
 
 export enum CustomTextStyle {
   PageTitle,
-  Subtitle
+  Subtitle,
+  Paragraph
 };
 
 export const customTextStyles = StyleSheet.create({
@@ -15,5 +15,11 @@ export const customTextStyles = StyleSheet.create({
   },
   subtitle: {
     fontSize: 16
+  },
+  paragraph: {
+    color: 'white',
+    fontSize: 20,
+    padding: 10,
+    overflow: 'scroll'
   }
 });
