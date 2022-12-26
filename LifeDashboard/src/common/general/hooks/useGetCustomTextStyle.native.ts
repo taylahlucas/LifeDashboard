@@ -5,6 +5,8 @@ function useGetCustomTextStyle(style: CustomTextStyle) {
     case CustomTextStyle.PageTitle: return customTextStyles.pageTitle
     case CustomTextStyle.Subtitle: return customTextStyles.subtitle
     case CustomTextStyle.Paragraph: return customTextStyles.paragraph
+    case CustomTextStyle.InputSingleLine: return customTextStyles.inputSingleLine
+    case CustomTextStyle.InputParagraph: return customTextStyles.inputParagraph
   };
 }
 

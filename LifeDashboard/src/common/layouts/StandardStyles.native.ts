@@ -15,16 +15,29 @@ const standardStyles = StyleSheet.create({
   footerStyle: {
     bottom: 100
   },
+  overlay: {
+    position: 'absolute',
+    width: WINDOW_WIDTH,
+    height: WINDOW_HEIGHT,
+    backgroundColor: 'black',
+    opacity: 0.5
+  },
   addWidgetContainer: {
     width: WINDOW_WIDTH - (defaultSidePaddingLong * 2),
-    height: 400,
+    // TODO: Make height dynamic
+    minHeight: 500,
     backgroundColor: '#4F4C4C',
     alignSelf: 'center',
-    top: 80,
+    top: 70,
+    borderRadius: 5,
+    shadowRadius: 5,
+    zIndex: 10
   },
   addWidgetInnerContainer: {
-    padding: 20
-  }
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20
+  } 
 });
 
 export default standardStyles;

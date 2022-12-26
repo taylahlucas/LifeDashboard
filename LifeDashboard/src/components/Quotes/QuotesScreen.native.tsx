@@ -5,8 +5,8 @@ import StandardLayout from '../../common/layouts/StandardLayout.native';
 import { useReactNavigation } from '../../navigation/hooks/useReactNavigation.native';
 import QuotesWidget from './QuotesWidget.native';
 import AddWidgetPopup from '../../common/layouts/AddWidgetPopup.native';
-import CustomText from '../../common/general/CustomText.native';
 import { CustomTextStyle } from '../../common/general/CustomTextStyles.native';
+import CustomTextInput from '../../common/general/CustomTextInput.native';
 
 const QuotesScreen = () => {
   const navigation = useReactNavigation();
@@ -17,6 +17,7 @@ const QuotesScreen = () => {
       title={'Quotes'} 
       headerAction={(): void => navigation.goBack()}
       footerAction={(): void => addQuotePressed(true)}
+      isPopupVisible={addQuote}
     >
       <Spacer height={10} />
       <ScrollView>
@@ -25,8 +26,17 @@ const QuotesScreen = () => {
         <QuotesWidget quote={'The greatest glory in living lies not in never falling, but in rising every time we fall.'} author={''} />
         <QuotesWidget quote={'The greatest glory in living lies not in never falling, but in rising every time we fall.'} author={''} />
       </ScrollView>
-      <AddWidgetPopup title={'Add Quote'} isVisible={addQuote}>
-        <CustomText label={'Test'} textStyle={CustomTextStyle.Paragraph} />
+      <AddWidgetPopup title={'Add Quote'} isVisible={addQuote} onClose={addQuotePressed}>
+        <Spacer height={20} /> 
+        <CustomTextInput 
+          textStyle={CustomTextStyle.InputParagraph}
+          placeholder={'Enter quote...'} 
+          maxLength={500}
+          height={125}
+          multiline={true}
+        />
+        <Spacer height={10} />
+        <CustomTextInput placeholder={'Author...'} textStyle={CustomTextStyle.InputSingleLine}/>
       </AddWidgetPopup>
     </StandardLayout>
   );
