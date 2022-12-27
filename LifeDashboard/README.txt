@@ -12,6 +12,9 @@ react-native-reanimated-carousel
   - react-native-safe-area-context
   - @react-navigation/native-stack
 
+react-redux
+redux
+
 
 /* Babel Plugins */
 
