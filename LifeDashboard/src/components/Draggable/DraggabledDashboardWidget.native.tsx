@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { WINDOW_WIDTH } from '../../utils/constants.native';
+import * as Size from '../../utils/constants/sizes.native';
 
 interface DraggableDashboardWidgetProps {
   index: number;
@@ -11,7 +11,7 @@ const DraggabledDashboardWidget = ({ index, backgroundColor = '#70D3EE' }: Dragg
   return(
     <View
       style={{ 
-        width: WINDOW_WIDTH-20, 
+        width: Size.WINDOW_WIDTH-20, 
         height: 200, 
         marginTop: index >= 1 ? 20 : 0,
         borderRadius: 10,

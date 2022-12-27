@@ -5,10 +5,10 @@ function useGetCustomTextStyle(style: CustomTextStyle) {
     case CustomTextStyle.PageTitle: return customStyles.pageTitle
     case CustomTextStyle.Subtitle: return customStyles.subtitle
     case CustomTextStyle.Paragraph: return customStyles.paragraph
-    case CustomTextStyle.DropdownMenuItem: return customStyles.dropdownItemText
     case CustomTextStyle.Placeholder: return customStyles.placeholderText
     case CustomTextStyle.InputSingleLine: return customStyles.inputSingleLine
     case CustomTextStyle.InputParagraph: return customStyles.inputParagraph
+    case CustomTextStyle.DropdownMenuItem: return customStyles.dropdownItemText
   };
 }
 

@@ -25,7 +25,7 @@ const CustomDropdownMenuItem = ({ label, item, isSelected = false, onPress }: Cu
         label={label}
         textStyle={CustomTextStyle.DropdownMenuItem}
       />
-      <CircleTickButton 
+      <CircleTickButton
         style={{ position: 'absolute' , right: 0 }}
         isSelected={isSelected}
         // TODO: Add button highlight when selected

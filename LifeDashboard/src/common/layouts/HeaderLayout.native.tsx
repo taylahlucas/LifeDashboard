@@ -1,4 +1,4 @@
-import CloseButton from '../buttons/CloseButton.native';
+import IconButton from '../buttons/IconButton.native';
 import CustomText from '../general/Text/CustomText.native';
 import { CustomTextStyle } from '../general/CustomStyles.native';
 import standardStyles from './StandardStyles.native';
@@ -13,7 +13,8 @@ const HeaderLayout = ({ title = '', onPress }: HeaderLayoutProps): JSX.Element =
     <>
       {!!onPress 
       ?      
-        <CloseButton 
+        <IconButton 
+          name='close-outline'
           style={standardStyles.headerBtnContainer}
           onPress={onPress}
         /> 

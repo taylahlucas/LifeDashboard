@@ -1,4 +1,4 @@
-import { WINDOW_WIDTH } from '../../../utils/constants.native';
+import * as Size from '../../../utils/constants/sizes.native';
 
   // const { onTouchStart, onTouchEnd } = useSwipe(onSwipeLeft, onSwipeRight, 6)
   
@@ -11,7 +11,7 @@ function useSwipe(onSwipeLeft?: any, onSwipeRight?: any, rangeOffset = 4) {
 
     function onTouchEnd(e: any){
         const positionX = e.nativeEvent.pageX
-        const range = WINDOW_WIDTH / rangeOffset
+        const range = Size.WINDOW_WIDTH / rangeOffset
 
         // Check if position is growing positively and has reached specified range
         if(positionX - firstTouch > range){

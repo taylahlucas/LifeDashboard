@@ -1,5 +1,5 @@
 import { View } from 'react-native'; 
-import AddButton from '../buttons/AddButton.native';
+import IconButton from '../buttons/IconButton.native';
 import standardStyles from './StandardStyles.native';
 
 interface FooterLayoutProps {
@@ -9,7 +9,7 @@ interface FooterLayoutProps {
 const FooterLayout = ({ onPress }: FooterLayoutProps): JSX.Element => {
   return (
     <View style={standardStyles.footerStyle}>
-      <AddButton onPress={onPress} />
+      <IconButton name='add-outline' onPress={onPress} />
     </View> 
   );
 };

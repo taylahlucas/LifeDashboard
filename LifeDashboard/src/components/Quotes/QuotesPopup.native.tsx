@@ -12,7 +12,7 @@ interface QuotesPopupProps {
   isVisible: boolean;
   onConfirm: () => void;
 };
-// TODO: Fix set current value of tag list
+
 const QuotesPopup = ({ isVisible, onConfirm }: QuotesPopupProps) => {
   const { formData } = useQuoteFormDataState();
   const { setFormData } = useQuoteFormDataDispatch();
@@ -37,14 +37,12 @@ const QuotesPopup = ({ isVisible, onConfirm }: QuotesPopupProps) => {
         textStyle={CustomTextStyle.InputSingleLine}
       />
       <Spacer height={25} /> 
-      {/* // TODO: Create multi-select dropdown list */}
       <CustomDropdown
         placeholder={'tags'}
         options={tagData}
         selectedItems={formData.tags}
         itemAction={(item): void => {
           const tag: TagData = item as TagData;
-          console.log("TAG: ", tag)
           setFormData({
             ...formData,
             tags: formData.tags?.includes(tag) 

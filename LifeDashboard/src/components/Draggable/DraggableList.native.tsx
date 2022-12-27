@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import DraggableFlatList, { RenderItemParams } from 'react-native-draggable-flatlist';
 import DraggabledDashboardWidget from './DraggabledDashboardWidget.native';
 import { TouchableOpacity } from 'react-native';
-import { WINDOW_HEIGHT } from '../../utils/constants.native';
+import * as Size from '../../utils/constants/sizes.native';
 
 const NUM_ITEMS = 3;
 
@@ -46,7 +46,7 @@ const DraggableList = () => {
 
   return (
     <DraggableFlatList
-      style={{ maxHeight: WINDOW_HEIGHT-200, top: 20, borderRadius: 2 }}
+      style={{ maxHeight: Size.WINDOW_HEIGHT-200, top: 20, borderRadius: 2 }}
       data={data}
       scrollsToTop={false}
       onDragEnd={({ data }) => setData(data)}

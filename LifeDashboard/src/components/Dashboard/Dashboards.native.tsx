@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from 'react-native-reanimated-carousel';
 import { useSharedValue } from 'react-native-reanimated';
-import { WINDOW_WIDTH, WINDOW_HEIGHT } from '../../utils/constants.native';
+import * as Size from '../../utils/constants/sizes.native';
 import DashboardCard from './DashboardCard.native';
 import { dashboardData } from '../../data/mockData.native';
 import Spacer from '../../common/general/Spacer.native';
@@ -13,8 +13,8 @@ const Dashboards: React.FunctionComponent = () => {
 
   const baseOptions = {
     vertical: false,
-    width: WINDOW_WIDTH,
-    height: WINDOW_HEIGHT
+    width: Size.WINDOW_WIDTH,
+    height: Size.WINDOW_HEIGHT
   }
   
   return(

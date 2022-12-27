@@ -4,7 +4,7 @@ import CustomText from '../general/Text/CustomText.native';
 import { CustomTextStyle } from '../general/CustomStyles.native';
 import HeaderLayout from './HeaderLayout.native';
 import standardStyles from './StandardStyles.native';
-import TickButton from '../../common/buttons/TickButton.native';
+import IconButton from '../../common/buttons/IconButton.native';
 
 interface AddWidgetPopupProps {
   title?: string;
@@ -42,7 +42,8 @@ const AddWidgetPopup = ({ title='', children, isVisible, onClose }: AddWidgetPop
             />
             {children}
           </View>
-          <TickButton 
+          <IconButton 
+            name='checkmark-done-outline'
             style={standardStyles.addWidgetButton}
             // TODO: Add quote to DB
             onPress={(): void => console.log("CONFIRM")}

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Pressable, View } from 'react-native';
 import { customStyles, CustomTextStyle } from '../CustomStyles.native';
 import CustomText from '../Text/CustomText.native';
-import DownArrowButton from '../../buttons/DownArrowButton.native';
+import IconButton from '../../buttons/IconButton.native';
 
 interface CustomDropdownButtonProps {
   placeholder: string;
@@ -20,7 +20,11 @@ const CustomDropdownButton = ({ placeholder, isOpen, onPress }: CustomDropdownBu
           label={placeholder} 
           textStyle={CustomTextStyle.Placeholder} 
         />
-        <DownArrowButton onPress={(): void => onPress(!isOpen)} />
+        <IconButton 
+          name='chevron-down-outline'
+          onPress={(): void => onPress(!isOpen)}
+          height={20}
+        />
       </View>
     </Pressable>
   );

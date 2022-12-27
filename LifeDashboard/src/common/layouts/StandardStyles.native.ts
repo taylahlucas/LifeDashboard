@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { WINDOW_HEIGHT, WINDOW_WIDTH } from '../../utils/constants/sizes.native';
+import * as Size from '../../utils/constants/sizes.native';
 import * as Padding from '../../utils/constants/padding.native';
 import * as Colors from '../../utils/constants/colors.native';
 
@@ -9,8 +9,8 @@ const standardStyles = StyleSheet.create({
     backgroundColor: Colors.darkGrey
   },
   container: {
-    width: WINDOW_WIDTH,
-    minHeight: WINDOW_HEIGHT,
+    width: Size.WINDOW_WIDTH,
+    minHeight: Size.WINDOW_HEIGHT,
     backgroundColor: Colors.darkGrey,
     alignItems: 'center'
   },
@@ -23,14 +23,14 @@ const standardStyles = StyleSheet.create({
   },
   overlay: {
     position: 'absolute',
-    width: WINDOW_WIDTH,
-    height: WINDOW_HEIGHT,
+    width: Size.WINDOW_WIDTH,
+    height: Size.WINDOW_HEIGHT,
     backgroundColor: 'black',
     opacity: 0.5
   },
   addWidgetContainer: {
-    width: WINDOW_WIDTH - (Padding.defaultPaddingLong * 2),
-    backgroundColor: Colors.medGrey,
+    width: Size.WINDOW_WIDTH - (Padding.defaultPaddingLong * 2),
+    backgroundColor: Colors.darkGrey,
     alignSelf: 'center',
     top: 80,
     borderRadius: Padding.defaultBorderRadius,

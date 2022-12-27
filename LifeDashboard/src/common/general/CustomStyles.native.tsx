@@ -40,12 +40,20 @@ export const customStyles = StyleSheet.create({
     paddingLeft: Padding.defaultPaddingMed,
     paddingRight: Padding.defaultPaddingLong,
   },
-  inputContainer: {
+  multiLineContainer: {
     backgroundColor: Colors.medGrey,
     color: Colors.lightWhite,
     borderRadius: Padding.defaultBorderRadius,
     fontSize: Font.largeFontSize,
-    padding: Padding.defaultPaddingMed
+    padding: Padding.defaultPaddingMed,
+  },
+  singleLineContainer: {
+    backgroundColor: Colors.medGrey,
+    color: Colors.lightWhite,
+    borderRadius: Padding.defaultBorderRadius,
+    fontSize: Font.largeFontSize,
+    padding: Padding.defaultPaddingMed,
+    justifyContent: 'center'
   },
   inputClearBtn: {
     position: 'absolute', 

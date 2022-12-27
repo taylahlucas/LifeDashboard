@@ -31,7 +31,7 @@ const SideMenuItem = ({ style, item, onPress }: SideMenuItemProps) => {
             name={item.icon} 
             size={40} 
             color='white' 
-            onPress={(): void => console.log("PRESSED-2")}
+            onPress={onPress}
           />
       }
     </Pressable>
