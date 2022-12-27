@@ -89,6 +89,7 @@ export const customStyles = StyleSheet.create({
   dropdownMenuContainer: {
     flex: 1,
     backgroundColor: Colors.medGrey,
+    borderRadius: Padding.defaultBorderRadius,
     position: 'absolute',
     width: 150,
     zIndex: 3
