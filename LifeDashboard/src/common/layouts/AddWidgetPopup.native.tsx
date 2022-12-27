@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { View, Modal, TouchableWithoutFeedback } from 'react-native';
-import CustomText from '../general/CustomText.native';
-import { CustomTextStyle } from '../general/CustomTextStyles.native';
+import { View, Modal } from 'react-native';
+import CustomText from '../general/Text/CustomText.native';
+import { CustomTextStyle } from '../general/CustomStyles.native';
 import HeaderLayout from './HeaderLayout.native';
 import standardStyles from './StandardStyles.native';
 import TickButton from '../../common/buttons/TickButton.native';

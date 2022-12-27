@@ -1,7 +1,6 @@
 import React from 'react';
-import { View } from 'react-native';
-import CustomText from '../../common/general/CustomText.native';
-import { CustomTextStyle } from '../../common/general/CustomTextStyles.native';
+import CustomText from '../../common/general/Text/CustomText.native';
+import { CustomTextStyle } from '../../common/general/CustomStyles.native';
 import QuotesWidgetContainer from './QuotesWidgetContainer.native';
 
 interface QuotesWidgetInterface {

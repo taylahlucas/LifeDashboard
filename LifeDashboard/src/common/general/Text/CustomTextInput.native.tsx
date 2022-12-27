@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { View, TextInput } from 'react-native';
-import { CustomTextStyle, customTextStyles } from './CustomTextStyles.native';
-import InputClearButton from '../buttons/InputClearButton.native';
-import useGetCustomTextStyle from './hooks/useGetCustomTextStyle.native';
+import { CustomTextStyle, customStyles } from '../CustomStyles.native';
+import InputClearButton from '../../buttons/InputClearButton.native';
+import useGetCustomTextStyle from '../hooks/useGetCustomTextStyle.native';
 
 interface CustomTextInputProps {
   textStyle: CustomTextStyle;
@@ -22,9 +22,9 @@ const CustomTextInput = ({
   const [value, setValue] = useState('')
 
   return (
-    <View style={customTextStyles.inputContainer}>
+    <View style={customStyles.inputContainer}>
       {/* // TODO: Animate button showing */}
-      {value.length > 0 ? <InputClearButton style={customTextStyles.inputClearBtn} onPress={(): void =>  setValue('')} /> : null}
+      {value.length > 0 ? <InputClearButton style={customStyles.inputClearBtn} onPress={(): void =>  setValue('')} /> : null}
       <TextInput 
         style={{ ...useGetCustomTextStyle(textStyle), height: height }}
         editable

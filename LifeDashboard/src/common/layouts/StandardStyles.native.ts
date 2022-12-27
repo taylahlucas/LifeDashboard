@@ -37,8 +37,9 @@ const standardStyles = StyleSheet.create({
     paddingBottom: 20
   },
   addWidgetButton: {
-    alignItems: 'center',
-    padding: 20
+    alignSelf: 'center',
+    padding: 20,
+    zIndex: -1
   }
 });
 

@@ -1,9 +1,14 @@
 export interface DashboardData {
   id: number,
   name: string
+};
+
+export interface TagData {
+  id: number,
+  label: string
 }
 
-const dashboardData: Array<DashboardData> = [
+export const dashboardData: Array<DashboardData> = [
   {
     id: 1,
     name: "Personal"
@@ -16,6 +21,23 @@ const dashboardData: Array<DashboardData> = [
     id: 3,
     name: "Random"
   }
-]
+];
 
-export default dashboardData;
+export const tagData: Array<TagData> = [
+  {
+    id: 1,
+    label: 'Wellbeing'
+  },
+  {
+    id: 2,
+    label: 'Health'
+  },
+  {
+    id: 3,
+    label: 'Exercise'
+  },
+  {
+    id: 4,
+    label: 'Work'
+  }
+];

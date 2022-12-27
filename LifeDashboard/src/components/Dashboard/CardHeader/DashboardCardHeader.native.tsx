@@ -1,6 +1,5 @@
-import AddDashboardButton from './AddDashboardButton.native';
-import CustomText from '../../../common/general/CustomText.native';
-import { CustomTextStyle } from '../../../common/general/CustomTextStyles.native';
+import CustomText from '../../../common/general/Text/CustomText.native';
+import { CustomTextStyle } from '../../../common/general/CustomStyles.native';
 
 interface DashboardCardHeaderProps {
   title?: String;

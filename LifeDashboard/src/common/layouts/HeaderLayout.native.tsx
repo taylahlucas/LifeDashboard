@@ -1,6 +1,6 @@
 import CloseButton from '../buttons/CloseButton.native';
-import CustomText from '../general/CustomText.native';
-import { CustomTextStyle } from '../general/CustomTextStyles.native';
+import CustomText from '../general/Text/CustomText.native';
+import { CustomTextStyle } from '../general/CustomStyles.native';
 import standardStyles from './StandardStyles.native';
 
 interface HeaderLayoutProps {

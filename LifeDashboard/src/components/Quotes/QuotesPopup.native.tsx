@@ -1,15 +1,23 @@
 import React, { useState } from 'react';
 import Spacer from '../../common/general/Spacer.native';
 import AddWidgetPopup from '../../common/layouts/AddWidgetPopup.native';
-import { CustomTextStyle } from '../../common/general/CustomTextStyles.native';
-import CustomTextInput from '../../common/general/CustomTextInput.native';
+import { CustomTextStyle } from '../../common/general/CustomStyles.native';
+import CustomTextInput from '../../common/general/Text/CustomTextInput.native';
+import { tagData } from '../../data/mockData.native';
+import CustomDropdown from '../../common/general/DropDown/CustomDropdown.native';
 
 interface QuotesPopupProps {
   isVisible: boolean;
   onConfirm: () => void;
 };
-
+// TODO: Fix set current value of tag list
 const QuotesPopup = ({ isVisible, onConfirm }: QuotesPopupProps) => {
+  const [currentValue, assignValue] = useState('');
+
+  const setCurrentValue = (value: string) => {
+    assignValue(value);
+  };
+
   return (
     <AddWidgetPopup 
       title={'Add Quote'}
@@ -29,7 +37,14 @@ const QuotesPopup = ({ isVisible, onConfirm }: QuotesPopupProps) => {
         placeholder={'Author...'} 
         textStyle={CustomTextStyle.InputSingleLine}
       />
-      {/* TODOO: Tag dropdown */}
+      <Spacer height={25} /> 
+      <CustomDropdown
+        placeholder={'tags'}
+        options={tagData}
+        setCurrentValue={setCurrentValue}
+        currentValue={currentValue}
+      />
+      <Spacer height={50} />
     </AddWidgetPopup>
   );
 };

@@ -6,7 +6,7 @@ import { useReactNavigation } from '../../navigation/hooks/useReactNavigation.na
 import QuotesWidget from './QuotesWidget.native';
 import QuotesPopup from './QuotesPopup.native';
 
-const QuotesScreen = () => {
+const QuotesPage = () => {
   const navigation = useReactNavigation();
   const [addQuote, addQuotePressed] = useState(false)
   
@@ -32,4 +32,4 @@ const QuotesScreen = () => {
   );
 };
 
-export default QuotesScreen;
+export default QuotesPage;
