@@ -35,7 +35,17 @@ const SideMenuItem = ({ style, item, onPress }: SideMenuItemProps) => {
           />
       }
       {/* // TODO: Refactor  Condition to work with If / Else */}
-      {/* <Condition condition={item.iconType === IconType.MaterialIcon}>
+      {/* <Condition 
+        condition={item.iconType === IconType.MaterialIcon}
+        conditional={
+          <IonIcons 
+            style={sideMenuStyles.icon} 
+            name={item.icon}
+            size={40} 
+            color='white' 
+            onPress={onPress}
+          />
+        }>
         <MaterialIcons
           style={sideMenuStyles.icon} 
           name={item.icon} 
@@ -43,15 +53,6 @@ const SideMenuItem = ({ style, item, onPress }: SideMenuItemProps) => {
           color='white' 
           onPress={onPress}
         />
-      </Condition>
-      <Condition condition={item.iconType === IconType.IonIcons}>
-        <IonIcons 
-            style={sideMenuStyles.icon} 
-            name={item.icon} 
-            size={40} 
-            color='white' 
-            onPress={onPress}
-          />
       </Condition> */}
     </Pressable>
   );

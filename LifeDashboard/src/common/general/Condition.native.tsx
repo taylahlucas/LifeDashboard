@@ -3,9 +3,12 @@ import React from 'react';
 interface ConditionProps {
   condition: boolean;
   children: any;
+  conditional?: any;
 };
 
-const Condition = ({ condition = false, children }: ConditionProps) => {
+// TODO: Fix this to work with If / Else
+const Condition = ({ condition = false, children, conditional }: ConditionProps) => {
+  // (!!conditional ?  <React.Fragment>{conditional}</React.Fragment> : <></>)
   return (
     <>
       {!!condition
