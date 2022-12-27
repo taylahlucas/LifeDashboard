@@ -7,7 +7,7 @@ interface SpacerProps {
 
 const Spacer = ({ height }: SpacerProps): JSX.Element => {
   return (
-    <View style={{ height: height }} />
+    <View style={{ zIndex: -1, height: height }} />
   );
 };
 

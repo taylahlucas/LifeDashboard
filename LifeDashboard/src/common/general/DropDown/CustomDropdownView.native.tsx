@@ -5,17 +5,21 @@ import CustomDropdownMenuItem from './CustomDropdownMenuItem.native';
 
 interface CustomDropdownViewProps {
   options: any[];
-  setCurrentValue: (value: string) => void;
+  selectedItems: any[];
+  itemAction:  (item: any) => void;
 };
 
-const CustomDropdownView = ({ options, setCurrentValue }: CustomDropdownViewProps): JSX.Element => {
+const CustomDropdownView = ({ options, selectedItems, itemAction }: CustomDropdownViewProps): JSX.Element => {
   return (
     <View style={{ flex: 1 }}>
       <ScrollView style={customStyles.dropdownMenuContainer}>
         {options.map(item =>
           <CustomDropdownMenuItem 
+            key={item.id}
             label={item.label}
-            onPress={setCurrentValue}
+            item={item}
+            isSelected={selectedItems.includes(item)}
+            onPress={itemAction}
           />
         )}
       </ScrollView>

@@ -14,6 +14,8 @@ react-native-reanimated-carousel
 
 react-redux
 redux
+redux-immutable
+immutable
 
 
 /* Babel Plugins */

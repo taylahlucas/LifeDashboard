@@ -64,13 +64,13 @@ export const customStyles = StyleSheet.create({
   dropdownContainer: {
     backgroundColor: '#464444',
     borderRadius: 5,
-    width: 150,
-    height: 40
+    width: 115,
+    height: 40,
   },
   dropdownTxtContainer: {
     flex: 1, 
     flexDirection: 'row', 
-    justifyContent: 'flex-start', 
+    justifyContent: 'flex-start',
     alignItems: 'center',
     marginLeft: 10,
     marginRight: 10

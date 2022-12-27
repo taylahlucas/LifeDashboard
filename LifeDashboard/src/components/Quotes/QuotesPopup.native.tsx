@@ -3,8 +3,10 @@ import Spacer from '../../common/general/Spacer.native';
 import AddWidgetPopup from '../../common/layouts/AddWidgetPopup.native';
 import { CustomTextStyle } from '../../common/general/CustomStyles.native';
 import CustomTextInput from '../../common/general/Text/CustomTextInput.native';
-import { tagData } from '../../data/mockData.native';
+import { TagData, tagData } from '../../data/mockData.native';
 import CustomDropdown from '../../common/general/DropDown/CustomDropdown.native';
+import useQuoteFormDataState from './hooks/useQuoteFormDataState.native';
+import useQuoteFormDataDispatch from './hooks/useQuoteFormDataDispatch.native';
 
 interface QuotesPopupProps {
   isVisible: boolean;
@@ -12,11 +14,8 @@ interface QuotesPopupProps {
 };
 // TODO: Fix set current value of tag list
 const QuotesPopup = ({ isVisible, onConfirm }: QuotesPopupProps) => {
-  const [currentValue, assignValue] = useState('');
-
-  const setCurrentValue = (value: string) => {
-    assignValue(value);
-  };
+  const { formData } = useQuoteFormDataState();
+  const { setFormData } = useQuoteFormDataDispatch();
 
   return (
     <AddWidgetPopup 
@@ -38,11 +37,21 @@ const QuotesPopup = ({ isVisible, onConfirm }: QuotesPopupProps) => {
         textStyle={CustomTextStyle.InputSingleLine}
       />
       <Spacer height={25} /> 
+      {/* // TODO: Create multi-select dropdown list */}
       <CustomDropdown
         placeholder={'tags'}
         options={tagData}
-        setCurrentValue={setCurrentValue}
-        currentValue={currentValue}
+        selectedItems={formData.tags}
+        itemAction={(item): void => {
+          const tag: TagData = item as TagData;
+          console.log("TAG: ", tag)
+          setFormData({
+            ...formData,
+            tags: formData.tags?.includes(tag) 
+              ? [...formData.tags.filter((item) => item.id !== tag.id)]
+              : [...formData.tags, tag]
+          })
+        }}
       />
       <Spacer height={50} />
     </AddWidgetPopup>

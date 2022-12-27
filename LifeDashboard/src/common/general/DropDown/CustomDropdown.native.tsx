@@ -5,23 +5,26 @@ import CustomDropdownView from './CustomDropdownView.native';
 interface CustomDropdownProps {
   placeholder: string;
   options: any[];
-  // TODO: Move this to redux state
-  setCurrentValue: (value: string) => void;
-  currentValue?: string;
+  selectedItems: any[];
+  itemAction: (item: any) => void;
 }
 
-const CustomDropdown = ({ placeholder, options, setCurrentValue, currentValue }: CustomDropdownProps): JSX.Element => {
+const CustomDropdown = ({ placeholder, options, selectedItems, itemAction }: CustomDropdownProps): JSX.Element => {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <>
       <CustomDropdownButton 
-        placeholder={currentValue || placeholder}
+        placeholder={placeholder}
         isOpen={openMenu}
         onPress={setOpenMenu}
       />
       {openMenu ?
-        <CustomDropdownView options={options} setCurrentValue={setCurrentValue} />
+        <CustomDropdownView 
+          options={options} 
+          selectedItems={selectedItems}
+          itemAction={itemAction}
+        />
         :
         null
       }
