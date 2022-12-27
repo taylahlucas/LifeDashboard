@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { WINDOW_WIDTH } from '../../utils/constants';
+import { WINDOW_WIDTH } from '../../utils/constants.native';
 
 interface DraggableDashboardWidgetProps {
   index: number;

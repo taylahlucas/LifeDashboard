@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { WINDOW_WIDTH, defaultSidePaddingLong } from '../../utils/constants';
+import { WINDOW_WIDTH, defaultSidePaddingLong } from '../../utils/constants.native';
 
 const quotesStyles = StyleSheet.create({
   container: {

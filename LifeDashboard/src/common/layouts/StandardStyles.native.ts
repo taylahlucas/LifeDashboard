@@ -1,11 +1,17 @@
 import { StyleSheet } from 'react-native';
-import { WINDOW_HEIGHT, WINDOW_WIDTH, defaultSidePaddingLong} from '../../utils/constants';
+import { WINDOW_HEIGHT, WINDOW_WIDTH } from '../../utils/constants/sizes.native';
+import * as Padding from '../../utils/constants/padding.native';
+import * as Colors from '../../utils/constants/colors.native';
 
 const standardStyles = StyleSheet.create({
+  background: {
+    flex: 1,
+    backgroundColor: Colors.darkGrey
+  },
   container: {
     width: WINDOW_WIDTH,
     minHeight: WINDOW_HEIGHT,
-    backgroundColor: '#3E3C3C',
+    backgroundColor: Colors.darkGrey,
     alignItems: 'center'
   },
   headerBtnContainer: {
@@ -23,22 +29,22 @@ const standardStyles = StyleSheet.create({
     opacity: 0.5
   },
   addWidgetContainer: {
-    width: WINDOW_WIDTH - (defaultSidePaddingLong * 2),
-    backgroundColor: '#4F4C4C',
+    width: WINDOW_WIDTH - (Padding.defaultPaddingLong * 2),
+    backgroundColor: Colors.medGrey,
     alignSelf: 'center',
     top: 80,
-    borderRadius: 5,
+    borderRadius: Padding.defaultBorderRadius,
     shadowRadius: 5,
     zIndex: 10
   },
   addWidgetInnerContainer: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20
+    paddingLeft: Padding.defaultPaddingLong,
+    paddingRight: Padding.defaultPaddingLong,
+    paddingBottom: Padding.defaultPaddingLong
   },
   addWidgetButton: {
     alignSelf: 'center',
-    padding: 20,
+    padding: Padding.defaultPaddingLong,
     zIndex: -1
   }
 });

@@ -14,15 +14,9 @@ interface StandardLayoutProps {
 };
 
 const StandardLayout = ({ children, title, style, headerAction, footerAction, isPopupVisible = false }: StandardLayoutProps) => {
-  const backgroundStyle = {
-    flex: 1,
-    backgroundColor: '#3E3C3C',
-    // backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-  
   return (
     <GestureHandlerRootView style={{ ...style, flex: 1 }}>
-      <SafeAreaView style={backgroundStyle}>
+      <SafeAreaView style={standardStyles.background}>
         <View style={standardStyles.container}>
           {!!title
             ?

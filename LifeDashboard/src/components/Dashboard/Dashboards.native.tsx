@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from 'react-native-reanimated-carousel';
 import { useSharedValue } from 'react-native-reanimated';
-import { WINDOW_WIDTH, WINDOW_HEIGHT } from '../../utils/constants';
+import { WINDOW_WIDTH, WINDOW_HEIGHT } from '../../utils/constants.native';
 import DashboardCard from './DashboardCard.native';
 import { dashboardData } from '../../data/mockData.native';
 import Spacer from '../../common/general/Spacer.native';

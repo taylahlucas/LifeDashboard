@@ -1,4 +1,7 @@
 import { StyleSheet } from 'react-native';
+import * as Font from '../../utils/constants/fonts.native';
+import * as Padding from '../../utils/constants/padding.native';
+import * as Colors from '../../utils/constants/colors.native';
 
 export enum CustomTextStyle {
   PageTitle,
@@ -12,77 +15,77 @@ export enum CustomTextStyle {
 
 export const customStyles = StyleSheet.create({
   pageTitle: {
-    color: 'white',
+    color: Colors.lightWhite,
     textAlign: 'center',
-    fontSize: 25,
+    fontSize: Font.headingFontSize,
     fontWeight: 'bold',
   },
   subtitle: {
-    fontSize: 16
+    fontSize: Font.medFontSize
   },
   paragraph: {
-    color: 'white',
-    fontSize: 20,
-    padding: 10,
+    color: Colors.lightWhite,
+    fontSize: Font.largeFontSize,
+    padding: Padding.defaultPaddingMed,
     overflow: 'scroll'
   },
   dropdownItemText: {
-    color: 'white',
-    fontSize: 16,
-    padding: 10
+    color: Colors.lightWhite,
+    fontSize: Font.medFontSize,
+    padding: Padding.defaultPaddingMed
   },
   placeholderText: {
-    fontSize: 20,
-    color: '#888888',
-    paddingLeft: 10,
-    paddingRight: 20,
+    fontSize: Font.largeFontSize,
+    color: Colors.lightGrey,
+    paddingLeft: Padding.defaultPaddingMed,
+    paddingRight: Padding.defaultPaddingLong,
   },
   inputContainer: {
-    backgroundColor: '#464444',
-    color: 'white',
-    borderRadius: 5,
-    fontSize: 20,
-    padding: 15
+    backgroundColor: Colors.medGrey,
+    color: Colors.lightWhite,
+    borderRadius: Padding.defaultBorderRadius,
+    fontSize: Font.largeFontSize,
+    padding: Padding.defaultPaddingMed
   },
   inputClearBtn: {
     position: 'absolute', 
     alignSelf: 'flex-end',
-    padding: 10,
+    padding: Padding.defaultPaddingMed,
     zIndex: 3
   },
   inputSingleLine: {
-    color: 'white',
-    fontSize: 20,
-    paddingLeft: 10,
-    paddingRight: 40
+    color: Colors.lightWhite,
+    fontSize: Font.largeFontSize,
+    paddingLeft: Padding.defaultPaddingMed,
+    paddingRight: Padding.defaultPaddingLong * 2
   },
   inputParagraph: {
-    color: 'white',
-    fontSize: 20,
-    padding: 10
+    color: Colors.lightWhite,
+    fontSize: Font.largeFontSize,
+    padding: Padding.defaultPaddingMed
   },
   dropdownContainer: {
-    backgroundColor: '#464444',
-    borderRadius: 5,
+    backgroundColor: Colors.medGrey,
+    borderRadius: Padding.defaultBorderRadius,
     width: 115,
-    height: 40,
+    height: Padding.defaultPaddingLong * 2,
   },
   dropdownTxtContainer: {
     flex: 1, 
     flexDirection: 'row', 
     justifyContent: 'flex-start',
     alignItems: 'center',
-    marginLeft: 10,
-    marginRight: 10
+    marginLeft: Padding.defaultPaddingMed,
+    marginRight: Padding.defaultPaddingMed
   },
   dropdownMenuContainer: {
     flex: 1,
-    backgroundColor: '#464444',
+    backgroundColor: Colors.medGrey,
     position: 'absolute',
     width: 150,
     zIndex: 3
   },
   dropdownMenuItem: {
-    padding: 10,
+    padding: Padding.defaultPaddingMed,
   }
 });

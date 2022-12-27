@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import * as Padding from '../../../utils/constants/padding.native';
 
 const sideMenuStyles = StyleSheet.create({
   base: {
@@ -14,7 +15,7 @@ const sideMenuStyles = StyleSheet.create({
     height: 390,
     width: 70,
     opacity: 0.6,
-    borderRadius: 5,
+    borderRadius: Padding.defaultBorderRadius,
     boxShadow: 20,
     shadowColor: '#000',
     shadowRadius: 10,
@@ -28,7 +29,7 @@ const sideMenuStyles = StyleSheet.create({
     height: 50,
     left: 10,
     marginTop: 15,
-    borderRadius: 5,
+    borderRadius: Padding.defaultBorderRadius,
     alignItems: 'center'
   },
   icon: {

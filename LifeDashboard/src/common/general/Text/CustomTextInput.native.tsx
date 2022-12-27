@@ -3,6 +3,7 @@ import { View, TextInput } from 'react-native';
 import { CustomTextStyle, customStyles } from '../CustomStyles.native';
 import InputClearButton from '../../buttons/InputClearButton.native';
 import useGetCustomTextStyle from '../hooks/useGetCustomTextStyle.native';
+import * as Size from '../../../utils/constants/sizes.native';
 
 interface CustomTextInputProps {
   textStyle: CustomTextStyle;
@@ -16,7 +17,7 @@ const CustomTextInput = ({
   textStyle, 
   placeholder = '', 
   maxLength = 100,
-  height = 20,
+  height = Size.defaultTextFieldHeight,
   multiline = false,
 }: CustomTextInputProps): JSX.Element => {
   const [value, setValue] = useState('')
