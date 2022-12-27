@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CustomDropdownButton from './CustomDropdownButton.native';
 import CustomDropdownView from './CustomDropdownView.native';
+import Condition from '../Condition.native';
 
 interface CustomDropdownProps {
   placeholder: string;
@@ -19,16 +20,13 @@ const CustomDropdown = ({ placeholder, options, selectedItems, itemAction }: Cus
         isOpen={openMenu}
         onPress={setOpenMenu}
       />
-      {openMenu ?
+      <Condition condition={openMenu}>
         <CustomDropdownView 
-          options={options} 
-          selectedItems={selectedItems}
-          itemAction={itemAction}
-        />
-        :
-        null
-      }
-      
+            options={options} 
+            selectedItems={selectedItems}
+            itemAction={itemAction}
+          />
+      </Condition>      
     </>
   );
 };

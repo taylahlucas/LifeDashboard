@@ -3,6 +3,7 @@ import standardStyles from './StandardStyles.native';
 import HeaderLayout from './HeaderLayout.native';
 import FooterLayout from './FooterLayout.native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import Condition from '../general/Condition.native';
 
 interface StandardLayoutProps {
   children: any;
@@ -18,29 +19,22 @@ const StandardLayout = ({ children, title, style, headerAction, footerAction, is
     <GestureHandlerRootView style={{ ...style, flex: 1 }}>
       <SafeAreaView style={standardStyles.background}>
         <View style={standardStyles.container}>
-          {!!title
-            ?
+          <Condition condition={!!title}>
             <HeaderLayout
               title={title} 
               onPress={headerAction}
             />
-            : null
-          }
+          </Condition>
           {children}
-          {!!footerAction 
-            ?
+          <Condition condition={!!footerAction}>
             <FooterLayout
-              onPress={footerAction}
+              onPress={footerAction ?? ((): void => {})}
             />
-            : null
-          }
+          </Condition>
         </View>
-        {isPopupVisible
-        ?
+        <Condition condition={isPopupVisible}>
           <View style={standardStyles.overlay} />
-          :
-          null
-        }
+        </Condition>
       </SafeAreaView>
     </GestureHandlerRootView>
   );

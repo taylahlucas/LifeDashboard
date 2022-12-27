@@ -4,6 +4,7 @@ import IonIcons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import sideMenuStyles from './SideMenuStyles';
 import { SideMenuItemType, IconType } from '../../../data/widgetData.native';
+import Condition from '../../general/Condition.native';
 
 interface SideMenuItemProps {
   style: object;
@@ -12,11 +13,10 @@ interface SideMenuItemProps {
 }
 
 const SideMenuItem = ({ style, item, onPress }: SideMenuItemProps) => {
+  console.log("HERE: ", item.iconType)
+  console.log("HERE: ", item.icon)
   return (
-    <Pressable 
-      style={{...style}}
-    >
-      {/* // TODO: Refactor */}
+    <Pressable style={{...style}}>
       {item.iconType === IconType.MaterialIcon
         ? <MaterialIcons
             style={sideMenuStyles.icon} 
@@ -34,6 +34,25 @@ const SideMenuItem = ({ style, item, onPress }: SideMenuItemProps) => {
             onPress={onPress}
           />
       }
+      {/* // TODO: Refactor  Condition to work with If / Else */}
+      {/* <Condition condition={item.iconType === IconType.MaterialIcon}>
+        <MaterialIcons
+          style={sideMenuStyles.icon} 
+          name={item.icon} 
+          size={40} 
+          color='white' 
+          onPress={onPress}
+        />
+      </Condition>
+      <Condition condition={item.iconType === IconType.IonIcons}>
+        <IonIcons 
+            style={sideMenuStyles.icon} 
+            name={item.icon} 
+            size={40} 
+            color='white' 
+            onPress={onPress}
+          />
+      </Condition> */}
     </Pressable>
   );
 };
