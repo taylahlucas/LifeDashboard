@@ -23,5 +23,3 @@ const IconButton: React.FunctionComponent<IconButtonProps> = ({
 };
 
 export default IconButton;
-
-//add-outline
