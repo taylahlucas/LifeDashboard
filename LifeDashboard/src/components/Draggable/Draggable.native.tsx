@@ -28,7 +28,6 @@ const Draggable = ({ style }: DraggableProps): JSX.Element => {
           x: pan.x._value,
           y: pan.y._value
         });
-        // console.log("onPanResponderGrant: ", event);
       },
       onPanResponderMove: Animated.event([
         null,
@@ -43,12 +42,10 @@ const Draggable = ({ style }: DraggableProps): JSX.Element => {
 
       onPanResponderTerminate: (event, gestureState) => {
         // Another component has become the responder, so gesture should be cancelled
-        // console.log("onPanResponderTerminate: ", event);
       },
       onShouldBlockNativeResponder: (event, gestureState) => {
         // Returns whether componetn should block native comonents from being responder
         // Currently only supported on android
-        // console.log("onShouldBlockNativeResponder: ", event);
         return true;
       }
     })

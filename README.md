@@ -8,9 +8,13 @@ Work In Progress - Includes the following functionality:
 
 ## Setup
 
-npm build   // On initial run
-npm start
-npm run ios   // Only tested on iOS so far, Android in progress
+- cd LifeDashboard
+- npm install
+- cd ios
+- pod install
+- cd ..
+- npm start
+- npm run ios   // Only tested on iOS so far, Android in progress
 
 ## Packages
 

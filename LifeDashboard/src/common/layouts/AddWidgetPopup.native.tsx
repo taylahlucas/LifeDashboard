@@ -46,7 +46,7 @@ const AddWidgetPopup = ({ title='', children, isVisible, onClose }: AddWidgetPop
             name='checkmark-done-outline'
             style={standardStyles.addWidgetButton}
             // TODO: Add quote to DB
-            onPress={(): void => console.log("CONFIRM")}
+            onPress={(): void => null}
           />
         </View>
       </Modal>

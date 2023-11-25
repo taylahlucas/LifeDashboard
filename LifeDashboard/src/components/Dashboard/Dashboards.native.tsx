@@ -20,16 +20,16 @@ const Dashboards: React.FunctionComponent = () => {
   return(
     <StandardLayout>
       <Spacer height={35} />
-        <Carousel
-          {...baseOptions}
-          pagingEnabled={isCarousel.current}
-          snapEnabled={isCarousel.current}
-          onProgressChange={(_, absoluteProgress) =>
-            (progressValue.value = absoluteProgress)
-          }
-          data={dashboardData}
-          renderItem={({ index, item }) => <DashboardCard key={index} item={item} />}
-        />
+      <Carousel
+        {...baseOptions}
+        pagingEnabled={isCarousel.current}
+        snapEnabled={isCarousel.current}
+        onProgressChange={(_, absoluteProgress) =>
+          (progressValue.value = absoluteProgress)
+        }
+        data={dashboardData}
+        renderItem={({ index, item }) => <DashboardCard key={index} item={item} />}
+      />
     </StandardLayout>
   );
 };
