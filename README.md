@@ -1,10 +1,15 @@
 # LifeDashboard-ReactNative
+
+#### 14th February 2023
+
 Customisable dashboard consisting of widgets such as task tracking, countdowns, quotes, lists, habits and more.
 
 Work In Progress - Includes the following functionality:
 - Quotes screen including functionality add a quote.
 - Move template widgets on the dashboard.
 - Swipe between dashboards.
+
+https://github.com/taylahlucas/LifeDashboard-ReactNative/assets/53559103/6f2cf161-5c4b-4500-905f-e8652550b074
 
 ## Setup
 
@@ -15,6 +20,14 @@ Work In Progress - Includes the following functionality:
 - cd ..
 - npm start
 - npm run ios   // Only tested on iOS so far, Android in progress
+
+## Folder Navigation
+
+/common - Reusable componants and layouts.
+/components - Custom components, layouts and pages.
+/data - Mock data.
+/navigation - Navigation stack functions.
+/ utils - Constants and redux.
 
 ## Packages
 
@@ -34,9 +47,6 @@ react-redux
 redux
 redux-immutable
 immutable
-
-
-## Babel Plugins
 
 react-native-reanimated/plugin
 
