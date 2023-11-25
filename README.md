@@ -3,6 +3,7 @@
 #### 14th February 2023
 
 Customisable dashboard consisting of widgets such as task tracking, countdowns, quotes, lists, habits and more.
+Built using React Native & TypeScript.
 
 Work In Progress - Includes the following functionality:
 - Quotes screen including functionality add a quote.
